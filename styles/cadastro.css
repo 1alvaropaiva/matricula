@@ -1,0 +1,42 @@
+body {
+    background-color: #016bc0;
+}
+
+.cadastro {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-fluid {
+    background-color: #ffcc00;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.container-fluid p {
+    font-weight: bold;
+    color: black;
+}
+
+.title {
+    text-align: center;
+    color: black;
+}
+
+.form-floating {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.btn {
+    margin-left: 230px;
+    margin-right: 247px;
+    a {
+        color: black;
+        text-decoration: none;
+    }
+}
+

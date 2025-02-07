@@ -1,0 +1,49 @@
+html,
+body {
+    background-color: #016bc0;
+    height: 100%;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-fluid {
+    background-color: #ffcc00;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.container-fluid p {
+    text-align: center;
+    font-weight: bold;
+    color: black;
+}
+
+.main {
+    margin-left: 140px;
+    margin-top: 100px;
+    width: 18rem;
+}
+
+.buttons {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.btn {
+    a {
+        text-decoration: none;
+        color: black;
+    }
+}
+
+.card-body h5 {
+    background-color: #ffcc00;
+    color: black;
+    text-align: center;
+}
