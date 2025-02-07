@@ -32,8 +32,10 @@ body {
 }
 
 .btn {
-    margin-left: 230px;
-    margin-right: 247px;
+    background-color: #ffcc00;
+    color: black;
+    margin-left: 237px;
+    margin-right: 268px;
     a {
         color: black;
         text-decoration: none;

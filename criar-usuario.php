@@ -1,6 +1,6 @@
 <?php
+require './includes/conexao.php';
 session_start();
-require 'conexao.php';
 
 if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['email']) && isset($_POST['matricula'])) {
     $username = $_POST['username'];
@@ -14,7 +14,6 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['emai
 
         $stmt->bind_param("ssss", $username, $password, $email, $matricula);
 
-        // Execute the statement
         if ($stmt->execute()) {
             header('Location: index.php');
             exit;
@@ -23,10 +22,8 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['emai
             exit;
         }
 
-        // Close the statement
         $stmt->close();
     } else {
-        // Handle query preparation failure
         echo "Error: Could not prepare query.";
     }
 } else {
@@ -34,4 +31,3 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['emai
 }
 
 $conexao->close();
-?>

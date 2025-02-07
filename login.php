@@ -1,5 +1,5 @@
 <?php
-require 'conexao.php';
+require './includes/conexao.php';
 session_start();
 ?>
 
@@ -9,37 +9,36 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Cadastro</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles/login.css">
+    <link rel="stylesheet" href="./assets/styles/login.css">
 </head>
 
 <body>
-    <div>
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid fixed-top flex-column">
+    <section>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary align-items-center d-flex">
+            <div class="container-fluid fixed-top justify-content-center flex-column">
                 <a class="navbar-brand" href="#">Faeterj Paracambi Alumni</a>
                 <p>Login</p>
             </div>
         </nav>
-    </div>
-    <section class="main">
-        <div class="card">
-            <div class="card-body">
-                <p class="card-text text-center">Para acessar o sistema, é necessário que você crie seu login clicando no botao abaixo e, no campo e-mail, use seu e-mail institucional <b>(@aluno.faeterj-prj.faetec.rj.gov.br).</b> Após criar, você será redirecionado ao sistema.</p>
+    </section>
+    <div style="margin-bottom: 100px;"></div>
+    <section class="cadastro">
+        <form action="logar-usuario.php" method="POST">
+            <h3 class="title mb-5"><b>Login</b></h3>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="username" name="username" placeholder="Digite seu nome" required>
+                <label class="name" for="floatinName">Nome</label>
             </div>
-        </div>
-        <div class="buttons">
-            <button class="btn btn-warning">
-                <a href=""><b>Login</b></a>
-            </button>
-            <button class="btn btn-warning">
-                <a href="cadastro.php"><b>Cadastro</b></a>
-            </button>
-            <button class="btn btn-warning">
-                <a href="instrucoes.php"><b>Ver orientações e instruções de uso</b></a>
-            </button>
-        </div>
+            <div class="form-floating mb-3">
+                <input type="password" class="form-control" id="password" name="password" placeholder="Digite sua senha" required>
+                <label class="password" for="floatinSenha">Senha</label>
+            </div>
+            
+            <button class="btn btn-primary py-2"><b>Entrar</b></button>
+        </form>
+        <button href="index.php" class="btn btn-warning py-2 mt-3"><a href="index.php"><b>Voltar</b></a></button>
     </section>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
