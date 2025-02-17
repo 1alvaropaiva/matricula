@@ -1,5 +1,5 @@
 <?php
-require './includes/conexao.php';
+require 'conexao.php';
 session_start();
 
 if (isset($_POST['username']) && isset($_POST['password'])) {
@@ -18,7 +18,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
             if ($password === $senha_banco) {
                 $_SESSION['id'] = $id; 
                 $_SESSION['username'] = $nome; 
-                header('Location: instrucoes.php');
+                header('Location: areaaluno.php');
                 exit;
             } else {
                 header('Location: index.php?erro=senha_incorreta'); 
